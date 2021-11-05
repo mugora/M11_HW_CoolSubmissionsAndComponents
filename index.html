@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cool Submissions and Components</title>
+    <link rel="stylesheet" href="myStyles.css">
+</head>
+<body>
+
+<!-- partial:index.partial.html -->
+<div id="app">
+    <input type="text" v-model="nameField" placeholder="Enter Name">
+    <br>
+    <input type="text" v-model="emailField" placeholder="Enter Email">
+    <br>
+    <button v-on:click="submit">Submit</button>
+    <div>{{nameMess}}</div>
+    <div>{{emailMess}}</div>
+    <div>{{success}}</div>
+    <codenames v-for="(item, index) in list" v-bind:names="item.name" v-bind:codename="item.codename"></codenames>
+</div>
+<!-- partial -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.min.js'> </script>
+<script  src="./script.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
